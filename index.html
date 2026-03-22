@@ -12,14 +12,14 @@
    >
     <link
       rel="stylesheet"
-      href="./css/swiper.css"
+      href="./styles/swiper.css"
    >
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
 
   <body>
-    <div class="es-loreal"
-         id="es-loreal">
+    <div id="es-rc"
+         class="es-rc-content">
       <div class="es-kv">
         <div class="es-kv__container">
           <div class="es-kv__content">
@@ -35,10 +35,6 @@
                   z planu filmowego.<br>
                 </h2>
                 <p class="es-kv__subtitle">Jesteś tego warta.</p>
-                <!-- <p class="es-kv__disc">
-                  *L’Oréal za Nielsen, wartościowe udziały rynkowe, kategoria
-                  koloryzacji włosów, 1-12.2019, cała Polska
-                </p> -->
               </div>
             </div>
           </div>
@@ -58,7 +54,7 @@
               Świetliste blondy pełne refleksów.<br>
               Fioletowa maska zwalczająca<br> żólte odcienie
             </p>
-            <p class="es-kv__right-subtitle es-kv__right-subtitle--2">trwałość do 6 tygodni</p>
+            <p class="es-kv__right-subtitle es-kv__right-subtitle--2">trwałość do 6 tygodni<sup>*</sup></p>
             <div class="es-kv__packshot">
               <img src="images/packshot-bg.png"
                    alt=""
@@ -117,7 +113,7 @@
                 <div class="es-pack__wrapper">
                   <p class="es-pack__subtitle">FIOLETOWA MASKA</p>
                   <p class="es-pack__text">
-                    Zwalczająca żółte refleksy. Chłodny blond aż do 6-u tygodni*
+                    Zwalczająca żółte refleksy. Chłodny blond aż&nbsp;do 6-u tygodni*
                   </p>
                 </div>
               </li>
@@ -125,19 +121,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="es-video">
-        <h3 class="es-video__title">Odkryj koloryzację<br> préférence cool blondes</h3>
-        <div class="es-video__container">
-          <iframe class="es-video__iframe"
-                  title="Preference video"
-                  width="100%"
-                  height="auto"
-                  src="https://www.youtube.com/embed/dEhWgM2chVY"
-                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-        </div>
-      </div> -->
 
       <div class="es-benefits">
         <div class="es-benefits__wrapper">
@@ -172,8 +155,6 @@
 
       <div class="es-slider">
         <h3 class="es-slider__title">ekspert podpowiada</h3>
-        <!-- <div class="es-slider__wrapper"> -->
-        <!-- <div class="es-slider__content"> -->
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -200,8 +181,6 @@
                         i&nbsp;końce dodaj 1 łyżkę stołową ciepłej wody - zmniejszy to
                         moc środka jednocześnie chroniąc Twoje włosy.
                       </p>
-                      <!-- <a href="#" class="es-slider__link">Więcej porad</a>
-                    <p class="es-slider__invisible">.</p> -->
                       <a href="#1"
                          target="_blank"
                          class="es-slider__link">Więcej porad</a>
@@ -215,7 +194,8 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="es-slider__wrapper es-slider__wrapper--2">
+              <div class="es-slider__wrapper es-slider__wrapper--2"
+                   style="">
                 <div class="es-slider__slide">
                   <div class="es-slider__content es-slider__content--2">
                     <div class="es-slider__inner">
@@ -228,25 +208,11 @@
                       <img src="./images/logo-rossmann.png"
                            alt=""
                            class="es-slider__logo">
-                      <p class="es-slider__disclaimer-2">*Ocena konsumentów rossmann.pl odcienia 8.1 na dzień 13.03.2026
+                      <p class="es-slider__disclaimer-2">*Ocena konsumentów rossmann.pl odcienia 8.1 na&nbsp;dzień
+                        13.03.2026
                       </p>
-                      <!-- <p class="es-slider__text">
-                        Pamiętaj, żeby zawsze dokładnie zapoznać się z instrukcją
-                        i zastosować wszystkie wskazówki. Wybrany odcień farby
-                        zaaplikuj na odrosty i dokładnie wmasuj, a po upływie
-                        wskazanego czasu nałóż mieszankę na całe włosy.
-                        <br><br>
-                        Złoty trik: do farby która została do nałożenia na długości
-                        i&nbsp;końce dodaj 1 łyżkę stołową ciepłej wody - zmniejszy to
-                        moc środka jednocześnie chroniąc Twoje włosy.
-                      </p> -->
-                      <!-- <a href="#" class="es-slider__link">Więcej porad</a>
-                    <p class="es-slider__invisible">.</p> -->
                     </div>
                   </div>
-                  <!-- <img src="./images/packshot.png"
-                       alt=""
-                       class="es-slider__packshot"> -->
                 </div>
               </div>
             </div>
@@ -268,12 +234,10 @@
                  class="es-slider__img">
           </div>
         </div>
-        <!-- </div> -->
-        <!-- </div> -->
       </div>
       <div class="es-effects">
         <p class="es-effects__title">
-          Ciesz się efektem koloryzacji<br> na dłużej dzięki Magic Retouch
+          Ciesz się efektem koloryzacji<br> na dłużej dzięki Magic&nbsp;Retouch
         </p>
         <img src="./images/effects.png"
              alt=""
@@ -283,19 +247,17 @@
 
     <script src="./scripts/slider.js"></script>
     <script>
-      const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        // direction: 'horizontal',
+      const swiper = new Swiper('#es-rc .swiper', {
         loop: true,
         autoHeight: true,
 
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: '#es-rc .swiper-button-next',
+          prevEl: '#es-rc .swiper-button-prev'
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: '#es-rc .swiper-pagination',
           clickable: true
         }
       })
